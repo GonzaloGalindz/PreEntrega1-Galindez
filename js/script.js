@@ -67,14 +67,14 @@ while (
   ropaElegida != "pantalon" &&
   ropaElegida != "zapatillas"
 ) {
-  ropaElegida = prompt("Por favor, inserte una indumentaria");
+  ropaElegida = prompt("Por favor, inserte una indumentaria").toLowerCase();
 }
 if (ropaElegida == "buzo") {
-  console.log(buzo);
+  buzo.muestra();
 } else if (ropaElegida == "pantalon") {
-  console.log(pantalon);
+  pantalon.muestra();
 } else if (ropaElegida == "zapatillas") {
-  console.log(zapatillas);
+  zapatillas.muestra();
 }
 
 //ARRAYS
