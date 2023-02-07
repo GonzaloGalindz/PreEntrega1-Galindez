@@ -1,16 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto Final</title>
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/scripts.js" defer></script>
   </head>
   <body>
-    <h1>Hola chicos de CoderHouse</h1>
-    <h3>
-      Bienvenidos a la primer pre-entrega del proyecto del curso de JavaScript
-    </h3>
+    <div class="centrado">
+      <h1 class="textoCentrado" id="bienvenida"></h1>
+      <form action="guardarUsuario" id="formGuardarUsuario">
+        <div id="datosUsuario">
+          <label class="etiqInput" for="nombre"><b>Nombre</b></label>
+          <input
+            id="inputNombre"
+            type="text"
+            placeholder="Nombre"
+            name="nombre"
+            required
+          />
+
+          <label class="etiqInput" for="apellido"><b>Apellido</b></label>
+          <input
+            id="inputApellido"
+            type="text"
+            placeholder="Apellido"
+            name="apellido"
+            required
+          />
+          <br />
+          <label class="etiquetaInput" for="correo"><b>Correo</b></label>
+          <input
+            id="inputCorreo"
+            type="text"
+            placeholder="Correo"
+            name="correo"
+            required
+          />
+          <br /><label class="etiqInput" for="telefono"><b>Teléfono</b></label>
+          <input
+            id="inputTelefono"
+            type="text"
+            placeholder="Telefono"
+            name="telefono"
+            required
+          />
+          <br /><label class="etiqInput"><b>Modo Animado</b></label>
+          <label class="switch">
+            <input type="checkbox" id="modoAnimado" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="container gap25">
+          <button type="submit" class="boton w-50">Guardar Usuario</button>
+          <button id="recargar" type="reset" class="boton fondo-rojo w-50">
+            Recargar
+          </button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

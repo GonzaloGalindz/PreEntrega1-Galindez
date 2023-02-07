@@ -1,3 +1,5 @@
+// PRE-ENTREGA 1
+
 // // Algoritmo con un condicional y utilizando un ciclo
 // let talle = prompt("Ingrese su talle de ropa");
 // console.log(talle);
@@ -105,5 +107,3 @@ console.log(marcasCaras);
 let marcasBaratas = "";
 marcasBaratas = marcasALaVenta.filter((marca) => marca.Precio < 10999);
 console.log(marcasBaratas);
-
-// METODOS DE BUSQUEDA Y FILTRADO DEL ARRAY
