@@ -31,27 +31,12 @@ class Usuario {
   }
 }
 
-// let plantillaModoOscuro = `<div class="inputSwitch">
-//                             <label class="etiquetaDeInput"><b>Modo Oscuro</b></label>
-//                             <label class="switch">
-//                                 <input type="checkbox" id="modoOscuro">
-//                                 <span class="slider round"></span>
-//                             </label>
-//                             </div>`;
-
-// let plantillaDatosUsuario = `<div id="datosUsuario">
-//                                 <label class="etiquetaDeInput" for="nombre"><b>Nombre</b></label>
-//                                 <input id="inputNombre" type="text" placeholder="Nombre" name="nombre" required>
-//                                 ${plantillaModoOscuro}
-//                             </div>`;
-
-let objectLocalStorage = JSON.parse(localStorage.getItem("usuario")); //busco en localStorage el objeto y hago un parse para que JS me devuelva un objeto
+let objectLocalStorage = JSON.parse(localStorage.getItem("usuario"));
 
 console.log("objectLocalStorage ===>");
 console.log(objectLocalStorage);
 
 if (objectLocalStorage) {
-  //Si Nombre tiene contenido, entonces lo muestro
   let usuario = new Usuario(
     objectLocalStorage.nombre,
     objectLocalStorage.apellido,
@@ -70,17 +55,21 @@ if (objectLocalStorage) {
   asignarValoresAlosInputs(usuario);
 }
 
+document.getElementById("inputNombre").value = "";
+document.getElementById("inputApellido").value = "";
+document.getElementById("inputTelefono").value = "";
+document.getElementById("inputCorreo").value = "";
 document
   .getElementById("modoAnimado")
-  .addEventListener("change", activarModoAnimado); //Escucho cuando hay cambios en el check de modo animado
+  .addEventListener("change", activarModoAnimado);
 document
   .getElementById("formGuardarUsuario")
   .addEventListener("submit", guardarUsuario);
 document.getElementById("recargar").addEventListener("click", () => {
-  location.reload(); //Con este metodo podemos recargar la pagina
+  location.reload();
 });
+
 function guardarUsuario(e) {
-  //Cancelamos el comportamiento del evento
   e.preventDefault();
   let valorInputNombre = document.getElementById("inputNombre").value;
   let valorInputApellido = document.getElementById("inputApellido").value;
