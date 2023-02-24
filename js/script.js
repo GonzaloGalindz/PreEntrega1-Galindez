@@ -1,4 +1,4 @@
-// document.getElementById("loader").style.display = "none";
+document.getElementById("loader").style.display = "none";
 
 class Usuario {
   constructor(usuario, contraseña, correo) {
@@ -24,8 +24,6 @@ class Usuario {
 }
 
 let objectLocalStorage = JSON.parse(localStorage.getItem("usuario"));
-console.log("objectLocalStorage ===>");
-console.log(objectLocalStorage);
 
 if (objectLocalStorage) {
   let usuario = new Usuario(
@@ -33,7 +31,6 @@ if (objectLocalStorage) {
     objectLocalStorage.contraseña,
     objectLocalStorage.correo
   );
-  console.log("usuario ===>");
   console.log(usuario);
 
   asignarValoresAlosInputs(usuario);
@@ -42,13 +39,13 @@ if (objectLocalStorage) {
   asignarValoresAlosInputs(usuario);
 }
 
-// document.getElementById("inputUsuario").value = "";
-// document.getElementById("inputContraseña").value = "";
-// document.getElementById("inputCorreo").value = "";
+document.getElementById("inputUsuario").value = "";
+document.getElementById("inputContraseña").value = "";
+document.getElementById("inputCorreo").value = "";
 document
-  .getElementById("formGuardarusuario")
-  .addEventListener("submit", guardarUsuario());
-document.getElementById("recargar").addEventListener("click", () => {
+  .getElementById("formGuardarUsuario")
+  .addEventListener("submit", guardarUsuario);
+document.getElementById("guardar").addEventListener("click", () => {
   location.reload();
 });
 
@@ -65,7 +62,7 @@ function guardarUsuario(e) {
       correo: valorInputCorreo,
     })
   );
-  grabarDatosServer({
+  guardarUsuarioServer({
     userId: valorInputUsuario,
     userCorreo: valorInputCorreo,
   });
@@ -82,15 +79,69 @@ function asignarValoresAlosInputs(usuario) {
       icon: "success",
       title: "Usuario registrado correctamente",
       showConfirmButton: false,
-      timer: 1500,
+      timer: 1250,
     });
   } else {
-    // Swal.fire({
-    //   position: "center",
-    //   icon: "error",
-    //   title: "No se pudo registrar el usuario",
-    //   showConfirmButton: false,
-    //   timer: 1500,
-    // });
+    Swal.fire({
+      title: "Registrate",
+      text: "Creá tu usuario a continuación",
+      icon: "warning",
+      showConfirmButton: false,
+      timer: 2000,
+    });
   }
 }
+
+const buscarUsuario = async (userId) => {
+  document.getElementById("loader").style.display = "";
+  document.getElementById("central").style.display = "none";
+  const resp = await fetch(`http://127.0.0.1:5500/user/${userId}`);
+  const data = await resp.json();
+  if (!resp.ok) {
+    mostrarMensaje({
+      titulo: "¡El usuario que busca no está registrado en la pagina!",
+      icono: "error",
+    });
+
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("central").style.display = "";
+    return;
+  }
+  console.log(data);
+  let usuario = new Usuario(data.userId, data.userCorreo);
+  asignarValoresAlosInputs(usuario);
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("central").style.display = "";
+};
+
+const guardarUsuarioServer = async (user) => {
+  document.getElementById("loader").style.display = "";
+  document.getElementById("central").style.display = "none";
+  const resp = await fetch("http://127.0.0.1:5500/user/", {
+    method: "POST",
+    body: JSON.stringify({
+      userId: user.userId,
+      userCorreo: user.userCorreo,
+    }),
+  });
+  const data = await resp.json();
+  if (resp.ok) {
+    mostrarMensaje({
+      titulo: "¡El usuario se registro correctamente!",
+      icono: "success",
+    });
+  } else {
+    console.log(data);
+    mostrarMensaje({
+      titulo: "¡Ocurrió un error al registrar el usuario!",
+      icono: "error",
+    });
+  }
+  return data;
+};
+
+document.getElementById("reiniciar").addEventListener("click", () => {
+  document.getElementById("inputUsuario").value = "";
+  document.getElementById("inputContraseña").value = "";
+  document.getElementById("inputCorreo").value = "";
+});
