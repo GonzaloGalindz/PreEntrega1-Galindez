@@ -1,135 +1,134 @@
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  vertical-align: super;
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: normal;
+  font-size: 100%;
+  color: #fe4646;
+
+  margin: 0;
+  background-color: #df1010;
 }
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #018f8f;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #000000;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #000000;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-/* Sacado de la W3 https://www.w3schools.com/howto/howto_css_signup_form.asp */
-
-/* Full-width input fields */
-input[type="text"] {
-  width: 80%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* Add a background color when the inputs get focus */
-input[type="text"]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #0aae3c;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-/* sacado de la W3 https://www.w3schools.com/css/css_align.asp */
-.centrado {
-  margin: auto;
-  width: 50%;
-  padding: 8px;
-}
-
-/* ESTO ES PROPIO */
-
-/* modo oscuro */
-.animado {
-  color: black;
-  background: linear-gradient(to left, #018f8f, #51f7f7);
-}
-
-.etiqInput {
-  padding-right: 15px;
-}
-.etiquetaInput {
-  padding-right: 22px;
-}
-.textoCentrado {
-  text-align: center;
-}
-
-.boton {
-  font-size: 20px;
-}
-
-.fondo-rojo {
-  background-color: rgba(227, 4, 4, 0.826);
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.container {
+#contenedor {
   display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
-.gap25 {
-  gap: 25px;
+#central {
+  max-width: 320px;
+  width: 100%;
+}
+
+.titulo {
+  font-size: 250%;
+  color: #fe4646;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#login {
+  width: 100%;
+  padding: 50px 30px;
+  background-color: #ffffff;
+
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+
+  box-sizing: border-box;
+}
+
+#login input {
+  font-family: "Overpass", sans-serif;
+  font-size: 110%;
+  color: #1f0c0c;
+
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  margin-bottom: 10px;
+  padding: 5px 5px 5px 10px;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#login input::placeholder {
+  font-family: "Overpass", sans-serif;
+  color: grey;
+}
+
+#login button {
+  font-family: "Overpass", sans-serif;
+  font-size: 110%;
+  color: black;
+  width: 100%;
+  height: 40px;
+  border: none;
+
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+
+  background-color: #fe4646;
+
+  margin-top: 10px;
+}
+
+#login button:hover {
+  background-color: #0f4c75;
+  color: grey;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #000000;
+  border-radius: 50%;
+  border-top: 16px solid #ce1310;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  background-color: #000000;
+  opacity: 0.8;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
