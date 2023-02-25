@@ -6,12 +6,12 @@ class Usuario {
     this.contraseña = contraseña;
     this.correo = correo;
   }
-  setNombre(nuevoUsuario) {
+  setUsuario(nuevoUsuario) {
     if (usuario != "") {
       this.usuario = nuevoUsuario;
     }
   }
-  setApellido(nuevaContraseña) {
+  setContraseña(nuevaContraseña) {
     if (this.contraseña != "") {
       this.contraseña = nuevaContraseña;
     }
@@ -92,12 +92,13 @@ function asignarValoresAlosInputs(usuario) {
   }
 }
 
-const buscarUsuario = async (userId) => {
+const buscarUsuario = async (_userId) => {
   document.getElementById("loader").style.display = "";
   document.getElementById("central").style.display = "none";
-  const resp = await fetch(`http://127.0.0.1:5500/user/${userId}`);
+  const resp = await fetch(`./data.json`);
   const data = await resp.json();
-  if (!resp.ok) {
+  let miUser = data.find((_userId) => data.userId === valorInputUsuario);
+  if (!miUser.ok) {
     mostrarMensaje({
       titulo: "¡El usuario que busca no está registrado en la pagina!",
       icono: "error",
@@ -112,32 +113,6 @@ const buscarUsuario = async (userId) => {
   asignarValoresAlosInputs(usuario);
   document.getElementById("loader").style.display = "none";
   document.getElementById("central").style.display = "";
-};
-
-const guardarUsuarioServer = async (user) => {
-  document.getElementById("loader").style.display = "";
-  document.getElementById("central").style.display = "none";
-  const resp = await fetch("http://127.0.0.1:5500/user/", {
-    method: "POST",
-    body: JSON.stringify({
-      userId: user.userId,
-      userCorreo: user.userCorreo,
-    }),
-  });
-  const data = await resp.json();
-  if (resp.ok) {
-    mostrarMensaje({
-      titulo: "¡El usuario se registro correctamente!",
-      icono: "success",
-    });
-  } else {
-    console.log(data);
-    mostrarMensaje({
-      titulo: "¡Ocurrió un error al registrar el usuario!",
-      icono: "error",
-    });
-  }
-  return data;
 };
 
 document.getElementById("reiniciar").addEventListener("click", () => {
