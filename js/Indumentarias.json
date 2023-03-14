@@ -1,0 +1,92 @@
+[
+  {
+    "articulo": 1,
+    "nombre": "Campera Selección Argentina",
+    "precio": 31999,
+    "imagen": "../img/Articulo1.webp"
+  },
+  {
+    "articulo": 2,
+    "nombre": "Camiseta River Plate 22/23",
+    "precio": 21999,
+    "imagen": "../img/Articulo2.webp"
+  },
+  {
+    "articulo": 3,
+    "nombre": "Camiseta Boca Juniors 22/23",
+    "precio": 24999,
+    "imagen": "../img/Articulo3.webp"
+  },
+  {
+    "articulo": 4,
+    "nombre": "Campera Real Madrid",
+    "precio": 34999,
+    "imagen": "../img/Articulo4.webp"
+  },
+  {
+    "articulo": 5,
+    "nombre": "Shorts Running Hombre",
+    "precio": 14999,
+    "imagen": "../img/Articulo5.webp"
+  },
+  {
+    "articulo": 6,
+    "nombre": "Calzas Running Mujer",
+    "precio": 25999,
+    "imagen": "../img/Articulo6.webp"
+  },
+  {
+    "articulo": 7,
+    "nombre": "Musculosa Running",
+    "precio": 12999,
+    "imagen": "../img/Articulo7.webp"
+  },
+  {
+    "articulo": 8,
+    "nombre": "Zapatillas Run Falcon 3.0 ",
+    "precio": 27999,
+    "imagen": "../img/Articulo8.webp"
+  },
+  {
+    "articulo": 9,
+    "nombre": "Zapatillas EQ21 Run",
+    "precio": 27999,
+    "imagen": "../img/Articulo9.webp"
+  },
+  {
+    "articulo": 10,
+    "nombre": "Buzo con Capucha Essentials",
+    "precio": 22999,
+    "imagen": "../img/Articulo10.webp"
+  },
+  {
+    "articulo": 11,
+    "nombre": "Calza Corta Sports Mujer",
+    "precio": 18999,
+    "imagen": "../img/Articulo11.webp"
+  },
+  {
+    "articulo": 12,
+    "nombre": "Zapatillas Strutter",
+    "precio": 25999,
+    "imagen": "../img/Articulo12.webp"
+  },
+  {
+    "articulo": 13,
+    "nombre": "Conjunto Deportivo Niños",
+    "precio": 21999,
+    "imagen": "../img/Articulo13.webp"
+  },
+  {
+    "articulo": 14,
+    "nombre": "Zapatillas Tensaur Niños",
+    "precio": 15999,
+    "imagen": "../img/Articulo14.webp"
+  },
+  {
+    "articulo": 15,
+    "nombre": "Mochila Argentina",
+    "precio": 22499,
+    "imagen": "../img/Articulo15.webp"
+  }
+]

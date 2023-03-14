@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -12,17 +12,22 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- Toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
 
     <title>Stars | Indumentaria deportiva</title>
-    <link rel="icon" type="image/x-icon" href="./img/icono-star.png" />
+    <link rel="icon" type="image/x-icon" href="../img/icono-star.png" />
   </head>
 
   <body>
@@ -31,7 +36,7 @@
         <div class="container-fluid">
           <a class="navbar-brand offset-md-1" href="index.html"
             ><img
-              src="./img/LogoStar.svg"
+              src="../img/LogoStar.svg"
               alt="Logo de Stars Indumentaria"
               class="Logo"
             />
@@ -55,10 +60,10 @@
               class="navbar-nav me-auto mb-2 mb-md-0 offset-md-1 offset-xl-5 navbar__list"
             >
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/catalogo.html">Catálogo</a>
+                <a class="nav-link" href="./catalogo.html">Catálogo</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="">Ofertas</a>
@@ -75,112 +80,54 @@
       </nav>
     </header>
 
-    <section class="container-fluid pb-3 encabezado">
-      <div class="row">
-        <div class="col-12 col-md-4 offset-md-1 encabezado__texto">
-          <h2
-            class="encabezado__texto__titulo"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            ⭐Stars⭐
-          </h2>
-          <p
-            class="encabezado__texto__texto"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            Vida deportiva, necesitas moda libre, conoce la línea de ropa
-            inspirada en el deporte
-          </p>
-        </div>
-        <div class="encabezado-img col-12 col-md-6">
-          <img src="./img/surfer.svg" alt="surfer" />
-          <img src="./img/gimnasio.svg" alt="gimnasio" />
-          <img src="./img/grand-slam.svg" alt="tenis" />
-        </div>
-      </div>
-    </section>
-
     <main>
-      <section class="container col-12 col-md-10 p-3">
+      <section class="container col-12 col-md-10 p-3 cards">
         <article class="row" data-aos="zoom-in-up" data-aos-duration="1000">
           <img
-            src="./img/basketball.svg"
-            alt="Imagen de la tienda"
+            src="../img/seleccion-argentina.webp"
+            alt="Selección Argentina"
             class="articulos__articulo__img col-12 col-md-6"
           />
           <div class="articulos__articulo__box col-12 col-md-6 mt-3">
             <h2 class="articulos__articulo__titulo">
-              ¿Por qué tenes que elegir Stars?
+              ¡Conocé a la Selección Argentina! participando del sorteo con tu
+              número de pedido
             </h2>
             <p class="articulos__articulo__texto">
-              Es la marca lider en indumentaria deportiva del pais, vestimos a
-              grandes profesionales en variadas disciplinas! Buscamos tu
-              comodidad para que puedas esforzarte al 100% en tus entrenamientos
-              o en tus partidos! Conocé nuestra tienda aquí abajo...
+              Realizando una compra en Stars indumentaria ganás la oportunidad
+              de participar en el sorteo para poder visitar a la Selección en el
+              predio de AFA.
             </p>
-            <div class="button m-auto">
-              <a
-                href="https://www.adidas.com.ar/"
-                title="Ir a la Tienda"
-                target="_blank"
-                >Ir a la Tienda</a
-              >
-            </div>
           </div>
         </article>
+      </section>
 
-        <article class="row" data-aos="zoom-in-up" data-aos-duration="1000">
-          <div class="articulos__articulo__box col-12 col-md-6 mt-3">
-            <h2 class="articulos__articulo__titulo">Stars | Promociones</h2>
-            <p class="articulos__articulo__texto">
-              En Stars pensamos en hombres, mujeres y niños a la hora de
-              producir nuestra indumentaria. Por lo cual, queremos ofrecerles
-              unas ofertas que no se pueden perder!!! Estamos con descuentos en
-              prendas seleccionadas para hombres y mujeres de todas las edades.
-              Vení a Stars!
-            </p>
-            <div class="button m-auto">
-              <a
-                href="https://www.adidas.com.ar/ofertas"
-                title="No te lo pierdas!"
-                >No te lo pierdas!</a
-              >
+      <section
+        class="cards container-fluid"
+        data-aos="zoom-in-up"
+        data-aos-duration="1000"
+      >
+        <div
+          class="catalogo d-flex justify-content-between align-items-center mb-5 mb-5"
+        >
+          <h2 class="catalogo--titulo">Shop Online</h2>
+          <img
+            src="../img/cart.png"
+            class="catalogo--image"
+            id="imagen-carrito"
+            alt=""
+          />
+        </div>
+        <div class="row">
+          <div
+            class="cards__container container-fluid gap-1"
+            id="contenedor-productos"
+          >
+            <div id="loader-productos">
+              <h3></h3>
             </div>
           </div>
-          <img
-            src="./img/descuentos.svg"
-            alt="Imagen de ofertas"
-            class="articulos__articulo__img col-12 col-md-6"
-          />
-        </article>
-
-        <article class="row" data-aos="zoom-in-up" data-aos-duration="1000">
-          <img
-            src="./img/fans-seleccion.svg"
-            alt="Imagen del conjunto de la selección"
-            class="articulos__articulo__img col-12 col-md-6"
-          />
-          <div class="articulos__articulo__box col-12 col-md-6 mt-3">
-            <h2 class="articulos__articulo__titulo">
-              Stars | Representando al país
-            </h2>
-            <p class="articulos__articulo__texto">
-              Vestimos al seleccionado argentino de futbol masculino y femenino.
-              ¡Festejemos el campeonato del mundo y alentemos a nuestra
-              seleccion desde donde sea que estemos! VAMOS ARGENTINA
-            </p>
-            <div class="button m-auto">
-              <a
-                href="https://www.adidas.com.ar/argentina"
-                title="Apoyá a la selección!"
-                target="_blank"
-                >Apoyá a la selección!</a
-              >
-            </div>
-          </div>
-        </article>
+        </div>
       </section>
     </main>
 
@@ -189,37 +136,37 @@
         <div class="footer__social-media col-12 col-md-4">
           <a href="https://www.twitter.com" target="_blank"
             ><img
-              src="./img/icon-twitter.png"
+              src="../img/icon-twitter.png"
               alt="icono de Twitter"
               class="footer__social-media__icon"
           /></a>
           <a href="https://www.instagram.com" target="_blank"
             ><img
-              src="./img/icon-instagram.png"
+              src="../img/icon-instagram.png"
               alt="icono de Instagram"
               class="footer__social-media__icon"
           /></a>
           <a href="https://www.youtube.com" target="_blank"
             ><img
-              src="./img/icon-youtube.png"
+              src="../img/icon-youtube.png"
               alt="icono de YouTube"
               class="footer__social-media__icon"
           /></a>
           <a href="https://www.facebook.com" target="_blank"
             ><img
-              src="./img/icon-facebook.png"
+              src="../img/icon-facebook.png"
               alt="icono de Facebook"
               class="footer__social-media__icon"
           /></a>
           <a href="https://www.whatsapp.com" target="_blank"
             ><img
-              src="./img/icon-whatsapp.png"
+              src="../img/icon-whatsapp.png"
               alt="icono de whatsapp"
               class="footer__social-media__icon"
           /></a>
           <a href="https://www.tiktok.com" target="_blank"
             ><img
-              src="./img/icon-tiktok.png"
+              src="../img/icon-tiktok.png"
               alt="icono de Tiktok"
               class="footer__social-media__icon"
           /></a>
@@ -236,9 +183,7 @@
             San Fernando del Valle de Catamarca - Catamarca - Argentina
           </p>
           <p class="footer__comercio-card__text">
-            <a href="mailto:StarsIndumentaria@gmail.com"
-              >StarsIndumentaria@gmail.com</a
-            >
+            <a href="mailto:info@lotusyoga.com">StarsIndumentaria@gmail.com</a>
           </p>
           <p class="footer__comercio-card__text">(054) 569-8649</p>
         </div>
@@ -249,7 +194,18 @@
         </div>
       </div>
     </footer>
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/catalogo.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script>
       AOS.init();
     </script>
